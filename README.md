@@ -24,3 +24,9 @@ console.log("%c 💬 你所热爱的就是你的生活 💬", "color: #ff69b4; f
 js和css单独创一个文件夹，文件夹名字就是js和css
 
 other styles是另一个风格，不过实装进服务器后有显示错误，本地就没有，看看你们能不能进行一个修复吧(修复了提交个pr((((( ）
+
+
+powered by openai
+powered by deepseek
+powered by aliyun tongyi qwen
+powered by sukairain teams X mhya123
