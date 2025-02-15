@@ -27,6 +27,9 @@ other styles是另一个风格，不过实装进服务器后有显示错误，�
 
 
 powered by openai
+
 powered by deepseek
+
 powered by aliyun tongyi qwen
+
 powered by sukairain teams X mhya123
