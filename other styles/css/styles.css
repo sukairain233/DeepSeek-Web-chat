@@ -1,0 +1,213 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+#wrapper {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 600px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    color: #4b4b4b;
+    padding: 20px;
+    border-radius: 12px 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: 2px solid #e0e0e0;
+}
+
+#new-chat-btn, #delete-all-btn {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #007bff;
+}
+
+#new-chat-btn:hover, #delete-all-btn:hover {
+    background-color: #0056b3;
+}
+
+#history-list {
+    flex-grow: 1;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.history-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.history-item:hover {
+    background-color: #e0e0e0;
+}
+
+.history-item.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+#main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+}
+
+#chat-container {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-upload-label {
+    cursor: pointer;
+    background-color: #007bff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+#input-area {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    transition: background-color 0.2s ease;
+    resize: vertical; /* 允许垂直调整 */
+    overflow-y: auto; /* 显示滚动条 */
+    max-height: 150px; /* 设置最大高度 */
+}
+
+#user-input:focus {
+    background-color: #ffffff;
+    outline: none;
+    border-color: #007bff;
+}
+
+#send-btn {
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #0056b3;
+}
+
+select, input[type="checkbox"] {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+select {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+        margin-bottom: 20px;
+        border-right: none;
+    }
+
+    #main {
+        padding: 15px;
+    }
+
+    #chat-container {
+        margin-bottom: 15px;
+    }
+}
+
+/* 定义AI消息的样式 */
+/* 用户消息的样式 */
+.user-message {
+    color: #008000;  /* 设置文字颜色为绿色 */
+    font-weight: normal; /* 普通字体 */
+    font-style: normal; /* 正常字体样式 */
+    background-color: #e0ffe0; /* 设置背景颜色为浅绿色 */
+    padding: 5px; /* 给消息添加内边距 */
+    border-radius: 8px; /* 给消息添加圆角 */
+    margin: 5px 0; /* 给消息添加外边距 */
+}
+
+/* AI消息的样式 */
+.ai-message {
+    color: #1e90ff;  /* 设置文字颜色为蓝色 */
+    font-weight: bold; /* 设置字体加粗 */
+    font-style: italic; /* 斜体 */
+    background-color: #f0f8ff; /* 设置背景颜色为淡蓝色 */
+    padding: 5px; /* 给消息添加内边距 */
+    border-radius: 8px; /* 给消息添加圆角 */
+    margin: 5px 0; /* 给消息添加外边距 */
+}

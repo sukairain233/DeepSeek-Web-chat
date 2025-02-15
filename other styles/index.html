@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek Web Chat by sukairain</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- 侧边栏 -->
+        <div id="sidebar">
+            <button id="new-chat-btn" onclick="createNewChat()">+ 新对话</button>
+            <button id="delete-all-btn" onclick="deleteAllChats()">删除所有对话</button>
+            <div id="history-list">
+                <!-- 历史对话项 -->
+            </div>
+        </div>
+
+        <!-- 主聊天区域 -->
+        <div id="main">
+            <div id="chat-container">
+                <!-- 聊天消息会动态添加到此处 -->
+            </div>
+            <div id="input-container">
+                <div class="toolbar">
+                    <!-- <label id="upload-label" class="file-upload-label">
+                        📁 上传文件
+                        <input type="file" id="file-upload" onchange="handleFileUpload(event)">
+                    </label> -->
+                    <div class="web-search-container">
+                        <input type="checkbox" id="web-search" onchange="toggleWebSearch(this.checked)">
+                        <label for="web-search">联网搜索</label>
+                    </div>
+                </div>
+                <div id="input-area">
+                    <select id="model-select" onchange="updateModel(this.value)">
+                        <option value="deepseek-chat">DeepSeek Chat</option>
+                        <option value="deepseek-reasoner">DeepSeek Reasoner</option>
+                    </select>
+                    <textarea id="user-input" placeholder="输入消息..." rows="1" oninput="adjustHeight(this)"></textarea>
+                    <button id="send-btn" onclick="sendMessage()">发送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
