@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek Web Chat by sukairain</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
+</head>
+<body>
+    <div id="sidebar">
+        <button id="new-chat-btn">+ 新对话</button>
+        <button id="delete-all-btn">删除所有对话</button>
+        <div id="history-list"></div>
+    </div>
+
+    <div id="main">
+        <div id="chat-container"></div>
+        <div id="input-container">
+            <div class="toolbar">
+                <label id="upload-label" class="file-upload-label">
+                    📁 上传文件(仅能上传纯文本文件)
+                    <input type="file" id="file-upload">
+                </label>
+                <div class="web-search-container">
+                    <input type="checkbox" id="web-search">
+                    <label for="web-search">联网搜索</label>
+                </div>
+            </div>
+            <div id="input-area">
+                <select id="model-select">
+                    <option value="deepseek-chat">DeepSeek Chat</option>
+                    <option value="deepseek-reasoner">DeepSeek Reasoner</option>
+                </select>
+                <input type="text" id="user-input" placeholder="输入消息...">
+                <button id="send-btn">发送</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
